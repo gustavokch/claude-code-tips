@@ -5,8 +5,8 @@
 set -e
 
 # Ensure node finds node-lief if installed in npx cache
-if [ -d "/Users/gus/.npm/_npx/f44a4ca36ad91b43/node_modules" ]; then
-  export NODE_PATH="/Users/gus/.npm/_npx/f44a4ca36ad91b43/node_modules:${NODE_PATH}"
+if [ -d "$HOME/.npm/_npx/f44a4ca36ad91b43/node_modules" ]; then
+  export NODE_PATH="$HOME/.npm/_npx/f44a4ca36ad91b43/node_modules:${NODE_PATH}"
 fi
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
