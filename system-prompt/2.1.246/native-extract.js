@@ -149,7 +149,7 @@ function extract(binaryPath) {
 }
 
 // Main
-const binaryPath = process.argv[2] || `${process.env.HOME}/.local/share/claude/versions/2.1.17`;
+const binaryPath = process.argv[2] || `${process.env.HOME}/.local/share/claude/versions/2.1.246`;
 const outputPath = process.argv[3] || "/tmp/native-cli.js";
 
 try {
