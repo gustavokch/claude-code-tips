@@ -4,10 +4,13 @@ description: Upgrade system prompt patches to the latest Claude Code version
 
 Upgrade system prompt patches to the latest Claude Code version.
 
-1. Run `npm view @anthropic-ai/claude-code version` to get the latest version
-2. List version directories under `system-prompt/` to find the most recent patched version
-3. If patches already exist for the latest version, report that and stop
-4. If not, follow `system-prompt/UPGRADING.md` to upgrade
-5. Always go through the **full** Final Verification Checklist at the bottom of UPGRADING.md - all three build types (npm, native-linux, native-macos) and all tests in the matrix, not just one. Use tmux for interactive tests like `/context`.
+Follow the instructions in `.claude/skills/upgrade-patches/SKILL.md`:
 
-**Container:** Use a dedicated `safeclaw-upgrade` container for all upgrade work. Create it with `cd /Users/yk/Desktop/projects/safeclaw && ./scripts/run.sh -s upgrade -n` if it doesn't exist. Do NOT use other safeclaw containers (e.g. community, work) - they may have specific Claude versions pinned for other purposes.
+1. Resolve target version (from argument or `claude --version` / npm).
+2. Scaffold `system-prompt/<VERSION>` from latest existing version.
+3. Locate/download native binary.
+4. Extract `cli.js` & compute SHA-256 hash.
+5. Reconcile & verify prompt patches until 100% pass.
+6. Synchronize tweakcc hashes & config.
+7. Repack, re-sign, and test native binary.
+8. Branch, commit, push, and create PR.
