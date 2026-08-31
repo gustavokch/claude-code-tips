@@ -1,0 +1,1 @@
+"-B":__WRAP__(__VAR1__().optional()).describe("rg -B lines before match."),"-A":__WRAP__(__VAR1__().optional()).describe("rg -A lines after match."),"-C":__WRAP__(__VAR1__().optional()).describe("Alias for context."),context:__WRAP__(__VAR1__().optional()).describe("rg -C lines before/after match.")

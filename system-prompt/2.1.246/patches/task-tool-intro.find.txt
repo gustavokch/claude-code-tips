@@ -1,0 +1,5 @@
+Launch a new agent to handle complex, multi-step tasks. Each agent type has specific capabilities and tools available to it.
+
+Available agent types are listed in <system-reminder> messages in the conversation.${VAR1}
+
+${VAR2}
